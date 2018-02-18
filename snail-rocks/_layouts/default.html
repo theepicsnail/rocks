@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>{{ site.title }}</title>
+   <meta name="author" content="Snail Van Horn" />
+   <!-- semantic ui -->
+   <link rel="stylesheet" href="/css/semantic.min.css" type="text/css" />
+</head>
+<body>
+<div class="site">
+  <div class="title">
+    <a href="/">Snail's Shell</a>
+    <img src="/images/snail.jpg">
+  </div>
+
+  {{ content }}
+
+  <div class="footer">
+    <div class="contact">
+      <p>
+        Snail Van Horn 
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/{{ site.github_username }}/">github.com/{{ site.github_username }}</a><br />
+        <a href="http://twitter.com/{{ site.twitter_username }}/">twitter.com/{{ site.twitter_username }}</a><br />
+      </p>
+    </div>
+  </div>
+</div>
+
+<a href="http://github.com/{{ site.github_username }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+
+<!-- semantic ui -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/javascripts/semantic.min.js"></script>
+</body>
+</html>
