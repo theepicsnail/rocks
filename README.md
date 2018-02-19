@@ -2,7 +2,7 @@
 Landing page for snail.rocks
 
 ## Requirements
-TODO: add requireemnts here
+To get started with jekyll: [https://jekyllrb.com/docs/installation](Installation) or [https://jekyllrb.com/docs/windows/](Installation on Windows)
 
 Usage:  https://jekyllrb.com/docs/usage/
 
