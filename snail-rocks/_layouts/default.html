@@ -5,33 +5,50 @@
    <title>{{ site.title }}</title>
    <meta name="author" content="Snail Van Horn" />
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="/css/overrides.css" type="text/css">
 </head>
 <body>
-<div class="site">
-  <div class="title">
-    <a href="/">Snail's Shell</a>
-    <img src="/images/snail.jpg">
-  </div>
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="mx-auto jumbotron-heading">
+                <a href="/">
+                    Snail's Shell
+                    <img width="10%" src="/images/snailshell.svg">
+                </a>
+            </h1>
+        </div>
+    </section>
+{{ content }}
 
-  {{ content }}
-
-  <div class="footer">
-    <div class="contact">
-      <p>
-        Snail Van Horn 
-      </p>
+<footer class="footer py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md">
+                <h5>Snail Van Horn</h5>
+                <small class="d-block mb-3 text-muted">© 2018-2200</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Follow me</h5>
+                <ul class="list-unstyled text-small">
+                    <li>
+                        <span style="padding-right: 5px;">{% octicon mark-github %}</span><a href="http://github.com/{{ site.github_username }}/">github.com/{{ site.github_username }}</a>
+                    </li>
+                    <li>
+                            <span style="padding-right: 5px;">{% octicon verified %}</span><a href="http://twitter.com/{{ site.twitter_username }}/">twitter.com/{{ site.twitter_username }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="contact">
-      <p>
-        <a href="http://github.com/{{ site.github_username }}/">github.com/{{ site.github_username }}</a><br />
-        <a href="http://twitter.com/{{ site.twitter_username }}/">twitter.com/{{ site.twitter_username }}</a><br />
-      </p>
-    </div>
-  </div>
-</div>
+</footer>
+</main>
 
-<a href="http://github.com/{{ site.github_username }}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
-
+<!-- bootstrap and shit -->
+<script
+			  src="http://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
