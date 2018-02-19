@@ -17,3 +17,5 @@ Username for different services such as github and twitter are specified in
 `_config.yml`
 
 - Icons: [https://github.com/primer/octicons/tree/master/lib/jekyll-octicons](octicons)
+
+The repo is configured such that `gh-pages` is treated like master.
