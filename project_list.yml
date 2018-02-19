@@ -1,0 +1,5 @@
+# Format: {username}/{project name}
+shaders:
+  - theepicsnail/MeshAssembler
+  - theepicsnail/Marker
+  - theepicsnail/Inventory
