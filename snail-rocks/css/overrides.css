@@ -6,3 +6,15 @@
     font-size: 2.5rem;
     font-weight: 300;
 }
+
+@media screen and (min-width: 767px) {
+    .snail-shell {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .snail-shell {
+        width: 20%;
+    }
+}
