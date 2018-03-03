@@ -4,8 +4,8 @@
 
 require 'yaml'
 require 'uri'
-require 'net/http'
 require 'pathname'
+require 'open-uri'
 
 class PostMaker
     attr_reader :site_list
@@ -17,12 +17,12 @@ class PostMaker
     end
 
     def extract_path(uri)
-        URI::parse(uri).path
+        URI.parse(uri).path
     end
 
     def build_url(uri)
         path = extract_path(uri)
-        URI::parse(@base_uri + path)
+        URI.parse("#{@base_uri}#{path}/master/README.md")
     end
 
     def get_project_name(path)
@@ -30,29 +30,35 @@ class PostMaker
     end
 
     def fetch(uri)
-        res = Net::HTTP.get_response(uri)
-        res.body
+       sleep(3)
+       uri.read
     end
 
     def post_exists?(project_name)
         @posts_folder.children.any? { |post_file| post_file.to_s.include? project_name }
     end
-
-    def build_post_title(project_name)
-        
+    def get_time_string
+        Time.now.strftime "%Y-%m-%d"
     end
 
-    def write_markdown_to_post(markdown)
+    def build_post_filename(project_name)
+        "#{get_time_string}-#{project_name}.md"
+    end
+
+    def write_markdown_to_post(markdown, project_name, site_url)
+        File.open(@posts_folder + build_post_filename(project_name), 'w+') { |f| f.write(markdown) }
     end
 
     def build_posts_from_yaml(site_url)
         project_name = get_project_name(site_url)
-        return if project_exists?(project_name)
+        return if post_exists?(project_name)
+        p "Writing post..."
         markdown_url = build_url(extract_path(site_url))
-        markdown = fetch(markdown_url)
+        write_markdown_to_post(fetch(markdown_url), project_name, site_url)
     end
 
     def build_posts
+        p "Building posts..."
         @site_list.each do |site_url|
             build_posts_from_yaml(site_url)
         end
