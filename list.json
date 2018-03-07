@@ -1,0 +1,30 @@
+[
+	{
+		"name":"Marker",
+		"preview":"/previews/marker.png",
+		"description":"Turn any room into your own personal presentation room with this prefab.",
+		"link":"https://github.com/theepicsnail/Marker",
+		"unitypackage":"https://github.com/theepicsnail/Marker/blob/master/Marker.unitypackage"
+	},
+	{
+		"name":"Avatar Profiler",
+		"preview":"/previews/profiler.png",
+		"description":"See mesh renderer, bones, and material counts for your avatar.",
+		"link":"https://github.com/theepicsnail/AvatarProfiler",
+		"unitypackage":"https://github.com/theepicsnail/AvatarProfiler/blob/master/AvatarProfiler.unitypackage"
+	},
+	{
+		"name":"Mesh Assembler",
+		"preview":"/previews/meshassembler.png",
+		"description":"Mesh pieces together and falls apart as you get closer or further away.",
+		"link":"https://github.com/theepicsnail/MeshAssembler",
+		"unitypackage":"https://github.com/theepicsnail/MeshAssembler/blob/master/MeshAssembler.unitypackage"
+	},
+	{
+		"name":"Poly color wave",
+		"preview":"/previews/polycolorwave.png",
+		"description":"A wave that changes the emission color of each polygon over time.",
+		"link":"https://github.com/theepicsnail/Shaders/tree/master/PolyColorWave",
+		"unitypackage": "https://github.com/theepicsnail/Shaders/blob/master/PolyColorWave/export.unitypackage"
+	}
+]

@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Snail's VRC content</title>
+</head>
+<body>
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-white">Hello, my name is Snail and I create shaders and tools. I was in need of a place to collect and then distribute the things I've built. Snail.rocks is that place.
+              </p>
+              <p class="text-white">
+              	So welcome, I hope you find what you're looking for and maybe a little bit extra. 
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="https://discordapp.com/invite/MFP9Zc" class="text-white">Discord: Snail#1234</a></li>
+                <li><a href="https://vrchat.net/home/user/snail" class="text-white">VRC: Snail</a></li>
+                <li><a href="https://github.com/theepicsnail/" class="text-white">Github: TheEpicSnail</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Snail.rocks</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">What's this place?</h1>
+          <p class="lead text-muted">Welcome to snail.rocks, the place where I dump my shaders and tools.</p>
+          <p class="text-muted">I really enjoy making shaders! People ask for them to put on worlds, avatars or just to see how they work. I wanted to get a single place to put things. This is a bit less structured than I would like, but it exists at all which is better than nothing!</p>
+        </div>
+      </section>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row" id="entries">
+            <!-- This is filled in from the json and the template below -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-left">
+          Help out by sharing pictures or fixes to these! Contact information is in the menu at the top!
+        </p>
+
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
+
+
+  <!-- CDNs are <3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-novkfxI48G9YvcamVHf01KL+Sm6JFherxeJKqUdbez8EoEsAued2k/cD43lYG+B1" crossorigin="anonymous">
+
+	<script>
+
+    function templatePreview(_) {
+      if(_['preview'])
+        return `<img class="card-img-top" src="${_['preview']||'/previews/none.png'}" alt="${_['name']}">`
+      return "";
+    }
+    function templateLinks(_) {
+      let out = "";
+      if(_['link'])
+        out += `<a class="btn primary" href="${_['link']}" role="button">Source</a>`;
+      if(_['unitypackage'])
+        out += `<a class="btn" href="${_['unitypackage']}" role="button">UnityPackage</a>`;
+      return out;
+    }
+
+    const template = (_)=>
+    `<div class="col-md-3">
+      <div class="card mb-3 box-shadow">
+        ${templatePreview(_)}
+        <div class="card-body">
+          <p class="card-text">${_['description']}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            ${templateLinks(_)}
+          </div>
+        </div>
+      </div>
+    </div>`;
+    const entries = $("#entries");
+    $.getJSON('/list.json', (data)=>{
+    	for(const entry of data) {
+    		console.log(entry)
+    		$(template(entry)).appendTo(entries);
+    	}
+    });
+	</script>
+
+  </body>
+</html>
