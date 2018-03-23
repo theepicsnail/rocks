@@ -26,5 +26,12 @@
 		"description":"A wave that changes the emission color of each polygon over time.",
 		"link":"https://github.com/theepicsnail/Shaders/tree/master/PolyColorWave",
 		"unitypackage": "https://github.com/theepicsnail/Shaders/raw/master/PolyColorWave/export.unitypackage"
+	},
+	{
+		"name":"Digital Display",
+		"preview":"previews/digitaldisplay.png",
+		"description":"Show a value on a digital readout with this shader",
+		"link":"https://github.com/theepicsnail/Shaders/tree/master/DigitalDisplay",
+		"unitypackage": "https://github.com/theepicsnail/Shaders/raw/master/DigitalDisplay/digititaldisplay.unitypackage"
 	}
 ]
