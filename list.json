@@ -33,5 +33,12 @@
 		"description":"Show a value on a digital readout with this shader",
 		"link":"https://github.com/theepicsnail/Shaders/tree/master/DigitalDisplay",
 		"unitypackage": "https://github.com/theepicsnail/Shaders/raw/master/DigitalDisplay/digititaldisplay.unitypackage"
+	},
+	{
+		"name":"3D Pano",
+		"preview":"Shows left/right eye panos in 3D.",
+		"description":"3D Pano image viewer.",
+		"link":"https://github.com/theepicsnail/Shaders/tree/master/3DPano",
+		"unitypackage": "https://github.com/theepicsnail/Shaders/raw/master/3DPano/export.unitypackage"
 	}
 ]
