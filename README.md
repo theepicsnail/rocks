@@ -1,37 +1,23 @@
-# rocks
-Landing page for snail.rocks
+# What is this?
+This is the source to snail.rocks.
 
-## Installation
-*Non-windows users*
-  [https://jekyllrb.com/docs/installation](Installation)
+If you're looking for any shaders/vrc things you've ended up at the wrong spot.
 
-*Windows users* 
-[https://jekyllrb.com/docs/windows/](Installation on Windows)
-Note: if you have trouble with building `nokogiri` via `bundle update` or `bundle install` try doing `gem install nokogiri --no-ri` and then run `bundle <update|install>` again 
-=======
-## Requirements
-To get started with jekyll: [https://jekyllrb.com/docs/installation](Installation) or [https://jekyllrb.com/docs/windows/](Installation on Windows)
+# Helping
+I appreciate help wherever provided!
 
-Usage:  https://jekyllrb.com/docs/usage/
+## If there's something broken/wrong 
+### And you can fix it
+Go ahead and fix it and send me a pull request or the files themselves and I'll take a look!
 
-Local build: `bundle exec jekyll serve`
-Prod build: `JEKYLL_ENV=production bundle exec jekyll build`
+### And you can't fix it
+Send me a message and I'll maybe get around to it. 
+I do all of this sort of as the mood suites me so no promises.
 
-## Details
-The default layout is specified in `_layouts/detail.html`
-Edit that if you want to change the overarching html for the site.
+## Nothing's wrong, just had an idea
+Awesome :) Try making it!
+If you have no idea where to start, message me and I'll try to help you get started.
 
-Username for different services such as github and twitter are specified in
-`_config.yml`
+Or if you just want to throw an idea at me you can do that too!
 
-- Icons: [https://github.com/primer/octicons/tree/master/lib/jekyll-octicons](octicons)
-
-The repo is configured such that `gh-pages` is treated like master.
-
-## Testing
-`bundle exec rspec post_maker_spec.rb`
-
-## Deployment
-Push to `gh-pages` to deploy.
-=======
-The repo is configured such that `gh-pages` is treated like master.
+Discord: Snail#1234
