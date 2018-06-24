@@ -28,6 +28,13 @@
 		"unitypackage": "https://github.com/theepicsnail/Shaders/raw/master/PolyColorWave/export.unitypackage"
 	},
 	{
+		"name":"Minecraft Trail renderer",
+		"preview":"previews/minecraft.png",
+		"description":"Play with a few minecraft blocks wherever whenever!",
+		"link":"https://github.com/theepicsnail/Shaders/tree/master/Minecraft",
+		"unitypackage": "https://github.com/theepicsnail/Shaders/raw/master/Minecraft/minecraft.unitypackage"
+	},
+	{
 		"name":"Digital Display",
 		"preview":"previews/digitaldisplay.png",
 		"description":"Show a value on a digital readout with this shader",
